@@ -1,0 +1,16 @@
+POST http://localhost:5000/mssv/19110337 HTTP/1.1
+content-type: application/json
+
+{
+    "id": "19110337",
+    "name": "me"
+}
+###
+
+GET http://localhost:5000 HTTP/1.1
+
+### 
+GET http://localhost:5000/mssv/19110343 HTTP/1.1
+
+### 
+GET http://localhost:5000/message/19110358 HTTP/1.1
