@@ -1,0 +1,30 @@
+<div class="show-detail d-flex flex-column align-items-center m-3">
+  <div class="show-post">
+    <div class="card mb-3 w-75">
+      <div class="card-body">
+        <h5 class="card-title">{{title}}</h5>
+        <p class="card-text">{{content}}</p>
+      </div>
+    </div>
+  </div>
+  <div
+    class="show-comments w-75 border-start border-dark rounded-2 border-opacity-10"
+  >
+    {{#each comments}}
+      <div class="card mb-3 w-75">
+        <div class="card-body">
+          <p class="card-text">{{comment}}</p>
+        </div>
+      </div>
+    {{/each}}
+    <form action="/comment/{{id}}" method="post" class="w-75">
+      <div class="mb-3">
+        <input type="text" class="form-control" id="comment" name="comment" />
+      </div>
+      <div class="">
+        <button type="submit" class="btn btn-primary">Add New Comment</button>
+      </div>
+
+    </form>
+  </div>
+</div>
